@@ -1,0 +1,13 @@
+{
+    "name": "personal-website",
+    "compatibility_date": "2024-05-10",
+    "assets": {
+      "directory": "./out"
+    },
+    "routes": [
+      {
+        "pattern": "lucasgingera.com",
+        "custom_domain": true
+      }
+    ]
+  } 

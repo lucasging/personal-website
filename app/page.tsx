@@ -68,11 +68,11 @@ export default function Home() {
             <Stack
               items={[
                 { id: 1, content: <Image src="/biztech.svg" alt="BizTech" width={200} height={200} />, link: "https://www.ubcbiztech.com" },
-                { id: 2, content: <Image src="/boomi.svg" alt="Boomi" width={200} height={200} />, link: "https://www.boomi.com" },
-                { id: 3, content: <Image src="/building.svg" alt="Grey" width={200} height={200} />, link: "https://www.x.com/lucasgingera" },
+                { id: 2, content: <Image src="/building.svg" alt="Building" width={200} height={200} />, link: "https://www.x.com/lucasgingera" },
+                { id: 3, content: <Image src="/boomi.svg" alt="Boomi" width={200} height={200} />, link: "https://www.boomi.com" },
                 { id: 4, content: <Image src="/biztech.svg" alt="BizTech" width={200} height={200} />, link: "https://www.ubcbiztech.com" },
-                { id: 5, content: <Image src="/boomi.svg" alt="Boomi" width={200} height={200} />, link: "https://www.boomi.com" },
-                { id: 6, content: <Image src="/building.svg" alt="Grey" width={200} height={200} />, link: "https://www.x.com/lucasgingera" },
+                { id: 5, content: <Image src="/building.svg" alt="Building" width={200} height={200} />, link: "https://www.x.com/lucasgingera" },
+                { id: 6, content: <Image src="/boomi.svg" alt="Boomi" width={200} height={200} />, link: "https://www.boomi.com" },
               ]}
             />
           </div>
@@ -84,9 +84,9 @@ export default function Home() {
           <div className="relative w-full">
             <Stack
               items={[
-                { id: 1, content: <Image src="/soundchain.svg" alt="Soundchain" width={200} height={200} />, link: "https://www.devpost.com/software/soundchain" },
+                { id: 1, content: <Image src="/examclock.svg" alt="Exam Clock" width={200} height={200} />, link: "https://examclock.app" },
                 { id: 2, content: <Image src="/presentify.svg" alt="Presentify" width={200} height={200} />, link: "https://www.devpost.com/software/presentify" },
-                { id: 3, content: <Image src="/examclock.svg" alt="Exam Clock" width={200} height={200} />, link: "https://examclock.app" },
+                { id: 3, content: <Image src="/soundchain.svg" alt="Soundchain" width={200} height={200} />, link: "https://www.devpost.com/software/soundchain" },
                 { id: 4, content: <Image src="/extension.svg" alt="Creator.co Recruitment Extension" width={200} height={200} />, link: "https://chromewebstore.google.com/detail/creator-recruitment-tool/jmdekeeihkgobjndkampjdpngkkcjcge" },
                 { id: 5, content: <Image src="/app.svg" alt="Creator.co APp" width={200} height={200} /> },
               ]}
