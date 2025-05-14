@@ -2,13 +2,10 @@
 
 import Image from "next/image"
 import Stack from "@/components/Stack"
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardTitle,
-} from "@/components/ui/card"
 import { Caudex } from "next/font/google"
+import { useState } from "react"
+import { Check } from "lucide-react"
+
 const caudex1 = Caudex({
   weight: "700",
   style: "italic",
@@ -20,6 +17,14 @@ const caudex2 = Caudex({
 })
 
 export default function Home() {
+  const [showCheck, setShowCheck] = useState(false)
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText('lucasgingera@outlook.com');
+    setShowCheck(true);
+    setTimeout(() => setShowCheck(false), 2000);
+  }
+
   return(
     <div className="flex h-screen items-center bg-zinc-950 relative">
       <div className="lg:hidden absolute inset-0 bg-zinc-950 z-50 flex flex-col items-center justify-center gap-8">
@@ -32,31 +37,43 @@ export default function Home() {
           <a className="text-white hover:text-gray-300 transition-colors cursor-pointer hover:underline" href="https://www.x.com/lucasgingera">twitter</a>
           <text className="text-white"> | </text>
           <button 
-            className="text-white hover:text-gray-300 transition-colors cursor-pointer hover:underline"
-            onClick={() => {
-              navigator.clipboard.writeText('lucasgingera@outlook.com');
-            }}
+            className="text-white hover:text-gray-300 transition-colors cursor-pointer hover:underline relative"
+            onClick={handleCopyEmail}
           >
             copy email
+            {showCheck && (
+              <span className="absolute -right-5 top-1/2 -translate-y-1/2 animate-fade-in-out">
+                <Check className="w-4 h-4 text-white" />
+              </span>
+            )}
           </button>
         </div>
       </div>
 
       <div className="w-[40%] ml-[10%] mr-[10%]">
-        <Image className="mb-6" src="/lucas.png" alt="Lucas Gingera" width={200} height={200} />
+        <Image 
+          className="mb-6 transform transition-all duration-300 ease-in-out hover:scale-110 hover:rotate-3 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]" 
+          src="/lucas.png" 
+          alt="Lucas Gingera" 
+          width={200} 
+          height={200} 
+        />
         <text className="text-white">Hey, I'm</text>
-        <h1 className={` text-7xl font-bold text-white mb-3 ${caudex1.className}`}>Lucas Gingera</h1>
+        <h1 className={` text-7xl font-bold text-white mb-4 ${caudex1.className}`}>Lucas Gingera</h1>
         <a className="text-white hover:text-gray-300 transition-colors cursor-pointer hover:underline" href="https://www.linkedin.com/in/lucasgingera/">linkedin</a>
         <text className="text-white"> | </text>
         <a className="text-white hover:text-gray-300 transition-colors cursor-pointer hover:underline" href="https://www.x.com/lucasgingera">twitter</a>
         <text className="text-white"> | </text>
         <button 
-          className="text-white hover:text-gray-300 transition-colors cursor-pointer hover:underline"
-          onClick={() => {
-            navigator.clipboard.writeText('lucasgingera@outlook.com');
-          }}
+          className="text-white hover:text-gray-300 transition-colors cursor-pointer hover:underline relative"
+          onClick={handleCopyEmail}
         >
           copy email
+          {showCheck && (
+            <span className="absolute -right-5 top-1/2 -translate-y-1/2 animate-fade-in-out">
+              <Check className="w-4 h-4 text-white" />
+            </span>
+          )}
         </button>
       </div>
       <div className="w-[60%] flex flex-col gap-8">
