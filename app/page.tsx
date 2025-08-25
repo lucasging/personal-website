@@ -17,7 +17,7 @@ export default function Home() {
     <div 
       className="h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center"
       style={{
-        backgroundImage: "url('/background2.jpg')",
+        backgroundImage: "url('/background.jpg')",
       }}
       onClick={() => activePanel && setActivePanel(null)}
     >
@@ -105,7 +105,7 @@ export default function Home() {
                     { img: '/creator.png', imgAlt: 'Creator', title: 'Product Management', small: 'January 2025 – May 2025', medium: 'Acted as a 0-to-1 product owner of an automation tool increasing influencer recruitment efficiency.', w: 80, h: 30, link: 'https://creator.co' },
                   ],
                   leadership: [
-                    { img: '/biztech1.png', imgAlt: 'UBC BizTech', title: 'Co-President', small: 'May 2025 – Present', medium: 'Leading UBC\'s largest technology club with 45 executives and 7 events, supporting 600+ members.', w: 130, h: 80, link: 'https://www.ubcbiztech.com' },
+                    { img: '/biztech.png', imgAlt: 'UBC BizTech', title: 'Co-President', small: 'May 2025 – Present', medium: 'Leading UBC\'s largest technology club with 45 executives and 7 events, supporting 600+ members.', w: 130, h: 80, link: 'https://www.ubcbiztech.com' },
                     { img: '/nwplus.png', imgAlt: 'nwPlus', title: 'Sponsorships Director', small: 'May 2024 – May 2025', medium: 'As a team raised over 80K+ in sponsorship revenue and brought in a record 79 sponsors.', w: 80, h: 80, link: 'https://nwplus.io' },
                   ],
                   tech: [
