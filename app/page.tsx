@@ -319,7 +319,9 @@ export default function Home() {
                     className="object-cover mx-auto"
                   />
                   <div className="absolute inset-0 pointer-events-none">
-                    <div className={`${arizonia.className} absolute bottom-48 right-61`} style={{ color: '#004377', fontSize: '45px', fontWeight: 400, filter: 'blur(1px)' }}>Gingera</div>
+                    <div className={`${arizonia.className} absolute -top-8 left-5`} style={{ color: '#004377', fontSize: '40px', fontWeight: 400, filter: 'blur(1px)' }}>
+                      Gingera
+                    </div>
                   </div>
                 </div>
               </div>
