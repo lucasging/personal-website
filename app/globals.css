@@ -59,3 +59,19 @@ html {
   scrollbar-width: none;
   overscroll-behavior: none;
 }
+
+/* Blur to focus text transition animation */
+@keyframes blurToFocus {
+  0% {
+    opacity: 0;
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.animate-text-fade {
+  animation: blurToFocus 0.5s ease-out;
+}

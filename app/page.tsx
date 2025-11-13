@@ -117,22 +117,17 @@ export default function Home() {
   };
 
   return (
-    <div 
-      className="h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center"
-      style={{
-        backgroundImage: "url('/background.jpg')",
-      }}
-    >
+    <div className="h-screen flex items-center justify-center" style={{ backgroundColor: '#F5F5F5' }}>
       <div className="hidden lg:flex gap-[20px] content-start items-center justify-start -ml-20">
         <div className="h-150">
           <Image src="/plus.svg" alt="Plus" width={30} height={30} className={`mb-2 mx-auto cursor-pointer transition-transform duration-200 transform ${altText ? 'rotate-45' : 'rotate-0'}`} onClick={() => setAltText((v) => !v)} />
           <div className="w-full h-full flex flex-col justify-start items-end gap-2 text-right mt-15">
-            <text className="font-bold italic">About Me</text>
+            <div className="font-bold italic">About Me</div>
             <button onClick={() => handleScrollToSection(1)} className={`cursor-pointer hover:opacity-80 transition-opacity ${currentSection === 1 ? 'underline' : ''}`}>Work Experience</button>
             <button onClick={() => handleScrollToSection(2)} className={`cursor-pointer hover:opacity-80 transition-opacity ${currentSection === 2 ? 'underline' : ''}`}>Student Leadership</button>
             <button onClick={() => handleScrollToSection(3)} className={`cursor-pointer hover:opacity-80 transition-opacity ${currentSection === 3 ? 'underline' : ''}`}>Tech Projects</button>
             <button onClick={() => handleScrollToSection(4)} className={`cursor-pointer hover:opacity-80 transition-opacity ${currentSection === 4 ? 'underline' : ''}`}>Media Projects</button>
-            <text className="font-bold mt-8 italic">Contact</text>
+            <div className="font-bold mt-8 italic">Contact</div>
             <button
               onClick={async () => {
                 try {
@@ -174,12 +169,12 @@ export default function Home() {
           </div>
           
           <div className="absolute top-2 right-2 z-30 text-sm text-right">
-            <span className="block font-bold italic">{altText ? 'Thinking About:' : 'Seeking:'}</span>
-            <span className="block">{altText ? 'Self Advocacy' : '2026 Internship'}</span>
+            <span key={`label-1-${altText}`} className="block font-bold italic animate-text-fade">{altText ? 'Thinking About:' : 'Incoming:'}</span>
+            <span key={`value-1-${altText}`} className="block animate-text-fade">{altText ? 'Communication' : 'PM at Microsoft'}</span>
           </div>
           <div className="absolute top-2 right-40 z-30 text-sm text-right">
-            <span className="block font-bold italic">{altText ? 'Working On:' : 'Studying:'}</span>
-            <span className="block">{altText ? 'Launching a Product' : 'Business and CS'}</span>
+            <span key={`label-2-${altText}`} className="block font-bold italic animate-text-fade">{altText ? 'Working On:' : 'Studying:'}</span>
+            <span key={`value-2-${altText}`} className="block animate-text-fade">{altText ? 'Launching a Product' : 'Business and CS'}</span>
           </div>
 
           <div className="relative mt-23">
@@ -256,8 +251,8 @@ export default function Home() {
               
               <div className="text-xs text-white text-right">
                 <div className="mb-1">
-                  <span className="font-bold italic">Seeking:</span>
-                  <span className="ml-1">2026 Internship</span>
+                  <span className="font-bold italic">Incoming:</span>
+                  <span className="ml-1">PM at Microsoft</span>
                 </div>
                 <div>
                   <span className="font-bold italic">Studying:</span>
